@@ -11,7 +11,6 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.compoasesnippets.ui.theme.CompoaseSnippetsTheme
-//Buttonの例
 
 @Composable
 fun FilledButton(){
