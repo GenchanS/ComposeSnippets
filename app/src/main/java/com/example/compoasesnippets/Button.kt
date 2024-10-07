@@ -1,5 +1,7 @@
 package com.example.compoasesnippets
 
+import android.animation.ValueAnimator
+import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,6 +25,8 @@ import com.example.compoasesnippets.ui.theme.CompoaseSnippetsTheme
 //import java.lang.reflect.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun FilledButton_(onClick: () -> Unit){
@@ -71,7 +75,7 @@ fun TextButton_(onClick: () -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-fun ButtonPreiew() {
+fun ButtonPreview() {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -79,10 +83,10 @@ fun ButtonPreiew() {
     ) {
         var count by remember { mutableIntStateOf(0) }
         FilledButton_(onClick = { count++ })
-        //FilledTonalButton_(onClick = { count++ })
-        //OutlinedButton_(onClick = { count++ })
-        //ElevatedButton_(onClick = { count++ })
-        //TextButton_(onClick = { count++ })
+        FilledTonalButton_(onClick = { count++ })
+        OutlinedButton_(onClick = { count++ })
+        ElevatedButton_(onClick = { count++ })
+        TextButton_(onClick = { count++ })
 
         Text(text = "Count: $count")
     }
