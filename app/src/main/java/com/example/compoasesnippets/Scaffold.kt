@@ -67,6 +67,7 @@ fun ScaffoldExample() {
             modifier = Modifier
                 .padding(innerPadding),
             verticalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
                 modifier = Modifier.padding(8.dp),
@@ -75,6 +76,18 @@ fun ScaffoldExample() {
                     floating action button $presses times
                 """.trimIndent(),
             )
+            Text(
+                modifier = Modifier.padding(8.dp),
+                text =
+                """
+                    floating action button $presses times
+                """.trimIndent(),
+            )
+            FloatingActionButton(
+                onClick = { presses++ },
+            ){
+                Icon(Icons.Default.Add, contentDescription = "Add")
+            }
         }
     }
 }
